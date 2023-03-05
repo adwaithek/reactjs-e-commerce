@@ -8,6 +8,13 @@ import SearchInput from "../../searchform/SearchInput";
 import useCategory from "../../hooks/useCategory";
 import { Badge } from "antd";
 import { useCart } from "../../../context/Cart";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {BsFillHandbagFill} from "react-icons/bs"
+import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
+
+
+
+
 
 function Header(){
   const [auth, setAuth] = useAuth();
@@ -126,8 +133,8 @@ function Header(){
               )}
               <li className="nav-item">
                 <NavLink to="/cart" className="nav-link">
-                  <Badge count={cart?.length} showZero >
-                    Cart
+                  <Badge count={cart?.length} showZero  style={{width:"5px",height:"20px"}} >
+                  <FontAwesomeIcon icon={faCartPlus}   style={{width:"40px"}} />
                   </Badge>
                 </NavLink>
               </li> 

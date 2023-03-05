@@ -30,7 +30,7 @@ const handleSubmit=async(e)=>{
 onChange={(e)=>setValues({...values,keyword:e.target.value})}
 />
 <button    className="searchb  btn btn-outline-success " type="submit">
-Search
+<p className='search'>Search</p>
 </button>
 </form>
 

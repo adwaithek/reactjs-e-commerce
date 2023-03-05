@@ -4,8 +4,11 @@ import { useCart } from '../../context/Cart'
 import { useAuth } from '../../context/auth'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-hot-toast'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import DropIn from 'braintree-web-drop-in-react'
 import axios from 'axios'
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
 
 function CartPage() {
 
@@ -113,10 +116,10 @@ className="card-img-top" alt="" width="100px" heigh='150px'
  />
                     </div>
                     <div className="col-md-8">
-<h4>{p.name}</h4>
+<h4 className='mt-4'>{p.name}</h4>
 <p>{p.description.substring(0,30)}</p>
 <p>Price: {p.price}</p>
-<button className='btn btn-danger'  onClick={removeCartItem}></button>
+<button  className='btn btn-outline-danger'  onClick={removeCartItem}><FontAwesomeIcon icon={faTrashCan} /></button>
                     </div>
                 </div>
                ))}

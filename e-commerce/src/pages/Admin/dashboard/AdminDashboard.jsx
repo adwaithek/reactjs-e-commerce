@@ -1,11 +1,8 @@
 import React from "react";
 import AdminMenu from "../../../components/Adminmenu/Adminmenu";
 import Layout from "../../../components/Layout/layout/Layout";
-// import AdminMenu from "../../components/Layout/AdminMenu";
-// import Layout from "./../../components/Layout/Layout";
 import { useAuth } from "../../../context/auth";
-// import './admindashboard.css'
-const Admindashboard = () => {
+function Admindashboard(){
 
 
   const [auth] = useAuth();
@@ -18,8 +15,9 @@ const Admindashboard = () => {
           </div>
           <div className="col-md-9">
             <div className="card w-75 p-3">
-              <h3> Admin Name : {auth?.user?.name}</h3>
-              <h3> Admin Email : {auth?.user?.email}</h3>
+              <img width={"130px"} style={{borderRadius:"50px"}} src="https://us.123rf.com/450wm/anatolir/anatolir2011/anatolir201105528/159470802-jurist-avatar-icon-flat-style.jpg?ver=6" alt="" />
+              <h6 className="mt-3"> Admin Name : {auth?.user?.name}</h6>
+              <h6> Admin Email : {auth?.user?.email}</h6>
             </div>
           </div>
         </div>

@@ -117,8 +117,8 @@ const handleDelete = async (pId) => {
                     <AdminMenu/>
                 </div>
                 <div className="col-md-9">
-                    <h1>manage categories</h1>
-                    <div className="p-3">
+                    <h4 className='ms-3'>Manage categories</h4>
+                    <div className="p-3 ">
                       <CategoryForm   handleSubmit={handleSubmit}  value={name} setValue={setName} />
                     </div>
              

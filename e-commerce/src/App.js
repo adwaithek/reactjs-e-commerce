@@ -26,6 +26,7 @@ import ProductDetails from './pages/productdetails/ProductDetails';
 import Categories from './pages/categories/Categories';
 import CategoryProduct from './pages/categoryProduct/CategoryProduct';
 import CartPage from './pages/cartpage/CartPage';
+import AdminOrders from './pages/Admin/adminOrders/AdminOrders';
   
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
 
             <Route   path='admin/products' element={<Product/>}  />
             <Route   path='admin/users' element={<Users/>}  />
+            <Route   path='admin/orders' element={<AdminOrders/>}  />
 
           </Route>
 

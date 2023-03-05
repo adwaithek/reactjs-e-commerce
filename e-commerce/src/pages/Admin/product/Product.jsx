@@ -36,7 +36,7 @@ useEffect(()=>{
 
   return (
     <Layout>
-    <div className="row dashboard">
+    <div className="row dashboard container-fluid m-3 p-3 dashboard">
       <div className="col-md-3">
         <AdminMenu />
       </div>
@@ -51,14 +51,14 @@ useEffect(()=>{
             >
               <div className="card m-2" >
                 <img
-                style={{ width: "18rem",height:'15rem' }}
+                style={{ width: "15rem",height:'14rem' }}
                   src={`/api/v1/product/product-photo/${p._id}`}
                   className="card-img-top"
                   alt={p.name}
                 />
                 <div className="card-body">
                   <h5 className="card-title">{p.name}</h5>
-                  <p className="card-text">{p.description}</p>
+                  <p className="card-text">{p.description.substring(0, 26)}...</p>
                 </div>
               </div>
             </Link>
