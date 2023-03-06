@@ -46,20 +46,24 @@ function CategoryProduct() {
 
     return (
         <Layout>
-      <div className="container mt-3 category">
-        <h4 className="text-center">Category - {category?.name}</h4>
-        <h6 className="text-center">{products?.length} result found </h6>
+      <div className="container mt-3 category ">
+        <h5 className="text-center "  style={{marginTop:"100px"}} >Category - {category?.name}</h5>
+        <p className="text-center">{products?.length} result found </p>
         <div className="row">
-          <div className="col-md-7  offset-2">
-            <div className="d-flex">
+          <div className="col-md-9  ">
+            <div className="d-flex" >
               {products?.map((p) => (
-                <div className="card m-2" key={p._id}>
+                <div className="card ns-5 m-2" key={p._id} style={{width:"18rem"}}>
                   <img
                     src={`/api/v1/product/product-photo/${p._id}`}
                     className="card-img-top"
+                    
+                    style={{width:"18rem",height:"15rem"} }
+                   
                     alt={p.name}
+                    
                   />
-                  <div className="card-body">
+                  <div className="card-body" style={{width:"18rem"}}>
                     <div className="card-name-price">
                       <h5 className="card-title">{p.name}</h5>
                       <h5 className="card-title card-price">

@@ -143,8 +143,8 @@ const HomePage = () => {
             </button>
           </div>
         </div>
-        <div className="col-md-9 ">
-          <h1 className="text-center">All Products</h1>
+      <div className="col-md-9 ">
+          <p className="text-center fs-3 mb-3">All Products</p>
           <div className="d-flex flex-wrap">
             {products?.map((p) => (
               <div className="card m-2" key={p._id} style={{width:"18rem"}}>

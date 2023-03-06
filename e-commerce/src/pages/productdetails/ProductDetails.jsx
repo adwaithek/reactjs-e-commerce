@@ -39,29 +39,29 @@ const ProductDetails = () => {
   return (
     <Layout>
       <div className="row container product-details dashboard">
-        <div className="col-md-6">
+        <div className="col-md-6" style={{heigh:"200px"}}>
           <img
             src={`/api/v1/product/product-photo/${product._id}`}
-            className="card-img-top"
+            className="card-img-top ms-2"
             alt={product.name}
-            height="300"
-            width={"350px"}
+            
+            height="450px"
           />
         </div>
         <div className="col-md-6 product-details-info">
-          <h1 className="text-center">Product Details</h1>
+          <h2 className="text-center mt-3">Product Details</h2>
           <hr />
-          <h6>Name : {product.name}</h6>
-          <h6>Description : {product.description}</h6>
-          <h6>
+          <p className="mt-2">Name : {product.name}</p>
+          <p className="mt-2">Description : {product.description}</p>
+          <p>
             Price :
             {product?.price?.toLocaleString("en-US", {
               style: "currency",
               currency: "USD",
             })}
-          </h6>
-          <h6>Category : {product?.category?.name}</h6>
-          <button class="btn btn-secondary ms-1">ADD TO CART</button>
+          </p>
+          <p>Category : {product?.category?.name}</p>
+          <button class="btn btn-outline-secondary  mt-3">ADD TO CART</button>
         </div>
       </div>
       <hr />
