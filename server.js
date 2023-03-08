@@ -10,7 +10,7 @@ import authRoutes from './routes/authRoute.js'
 import CategoryRoutes from './routes/categoryRoutes.js' 
 import productRoutes from './routes/productRoute.js'
 import cors from 'cors'
-
+import { fileURLToPath } from 'url'
 
 
 import path from 'path'
@@ -21,9 +21,13 @@ dotenv.config()
 
 connectDB();
 
+const __filename=fileURLToPath(import.meta.url);
+const __dirname=path.dirname(__filename);
+
+
 const app=express()
 
-const __dirname = path.dirname('../e-commerce/build');
+
 
 //middlewares
 app.use(cors());
